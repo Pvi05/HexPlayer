@@ -566,9 +566,7 @@ let rec orDeductionRule ((prevd, cSet) : carrierList) (scSet : carrier list)
 
 let incrPoslCount (critic : bool) (posl : posList) (set : Posset.t) : unit =
   let incr =
-    if critic then (
-      Printf.printf "jure wola";
-      1000)
+    if critic then 1000
     else 1
   in
   Posset.iter
@@ -886,9 +884,7 @@ let rec auxListcomp (lref : carrier list) (ltest : carrier list) : bool =
         List.length
           (List.filter (fun (_, settest) -> Posset.equal settest setref) ltest)
       in
-      if len > 1 then (
-        Printf.printf "bizarre";
-        false)
+      if len > 1 then (false)
       else if len < 1 then (
         Printf.printf "manquant : ";
         Posset.iter (fun (i, j) -> Printf.printf "| %d, %d |" i j) setref;
