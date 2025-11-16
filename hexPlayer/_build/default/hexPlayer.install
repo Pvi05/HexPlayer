@@ -1,0 +1,42 @@
+lib: [
+  "_build/install/default/lib/hexPlayer/META"
+  "_build/install/default/lib/hexPlayer/dune-package"
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.a" {"heatMap/heatMap.a"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cma" {"heatMap/heatMap.cma"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cmi" {"heatMap/heatMap.cmi"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cmt" {"heatMap/heatMap.cmt"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cmx" {"heatMap/heatMap.cmx"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cmxa" {"heatMap/heatMap.cmxa"}
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.ml" {"heatMap/heatMap.ml"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.a" {"hexLib/hexLib.a"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cma" {"hexLib/hexLib.cma"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cmi" {"hexLib/hexLib.cmi"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cmt" {"hexLib/hexLib.cmt"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cmx" {"hexLib/hexLib.cmx"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cmxa" {"hexLib/hexLib.cmxa"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.ml" {"hexLib/hexLib.ml"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLibArch.ml" {"hexLib/hexLibArch.ml"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__.cmi" {"hexLib/hexLib__.cmi"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__.cmt" {"hexLib/hexLib__.cmt"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__.cmx" {"hexLib/hexLib__.cmx"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__.ml" {"hexLib/hexLib__.ml"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__HexLibArch.cmi" {"hexLib/hexLib__HexLibArch.cmi"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__HexLibArch.cmt" {"hexLib/hexLib__HexLibArch.cmt"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib__HexLibArch.cmx" {"hexLib/hexLib__HexLibArch.cmx"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.a" {"invertMat/invertMat.a"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cma" {"invertMat/invertMat.cma"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cmi" {"invertMat/invertMat.cmi"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cmt" {"invertMat/invertMat.cmt"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cmx" {"invertMat/invertMat.cmx"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cmxa" {"invertMat/invertMat.cmxa"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.ml" {"invertMat/invertMat.ml"}
+  "_build/install/default/lib/hexPlayer/opam"
+]
+libexec: [
+  "_build/install/default/lib/hexPlayer/heatMap/heatMap.cmxs" {"heatMap/heatMap.cmxs"}
+  "_build/install/default/lib/hexPlayer/hexLib/hexLib.cmxs" {"hexLib/hexLib.cmxs"}
+  "_build/install/default/lib/hexPlayer/invertMat/invertMat.cmxs" {"invertMat/invertMat.cmxs"}
+]
+bin: [
+  "_build/install/default/bin/hex"
+]

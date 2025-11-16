@@ -1,0 +1,10 @@
+(executable
+ (public_name hex)
+ (name main)
+ (libraries hexLib heatMap invertMat))
+
+(env
+ (dev
+  (ocamlopt_flags (:standard -O3)))
+ (release
+  (ocamlopt_flags (:standard -O3))))

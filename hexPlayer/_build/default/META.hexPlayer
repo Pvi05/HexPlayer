@@ -1,0 +1,27 @@
+package "heatMap" (
+  directory = "heatMap"
+  description = ""
+  requires = ""
+  archive(byte) = "heatMap.cma"
+  archive(native) = "heatMap.cmxa"
+  plugin(byte) = "heatMap.cma"
+  plugin(native) = "heatMap.cmxs"
+)
+package "hexLib" (
+  directory = "hexLib"
+  description = ""
+  requires = "hexPlayer.heatMap hexPlayer.invertMat unionFind"
+  archive(byte) = "hexLib.cma"
+  archive(native) = "hexLib.cmxa"
+  plugin(byte) = "hexLib.cma"
+  plugin(native) = "hexLib.cmxs"
+)
+package "invertMat" (
+  directory = "invertMat"
+  description = ""
+  requires = ""
+  archive(byte) = "invertMat.cma"
+  archive(native) = "invertMat.cmxa"
+  plugin(byte) = "invertMat.cma"
+  plugin(native) = "invertMat.cmxs"
+)

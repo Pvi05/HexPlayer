@@ -1,0 +1,3 @@
+(library
+ (name invertMat)
+ (public_name hexPlayer.invertMat))

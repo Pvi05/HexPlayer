@@ -1,0 +1,93 @@
+(lang dune 3.15)
+(name hexPlayer)
+(sections (lib .) (libexec .) (bin ../../bin))
+(files
+ (lib
+  (META
+   dune-package
+   heatMap/heatMap.a
+   heatMap/heatMap.cma
+   heatMap/heatMap.cmi
+   heatMap/heatMap.cmt
+   heatMap/heatMap.cmx
+   heatMap/heatMap.cmxa
+   heatMap/heatMap.ml
+   hexLib/hexLib.a
+   hexLib/hexLib.cma
+   hexLib/hexLib.cmi
+   hexLib/hexLib.cmt
+   hexLib/hexLib.cmx
+   hexLib/hexLib.cmxa
+   hexLib/hexLib.ml
+   hexLib/hexLibArch.ml
+   hexLib/hexLib__.cmi
+   hexLib/hexLib__.cmt
+   hexLib/hexLib__.cmx
+   hexLib/hexLib__.ml
+   hexLib/hexLib__HexLibArch.cmi
+   hexLib/hexLib__HexLibArch.cmt
+   hexLib/hexLib__HexLibArch.cmx
+   invertMat/invertMat.a
+   invertMat/invertMat.cma
+   invertMat/invertMat.cmi
+   invertMat/invertMat.cmt
+   invertMat/invertMat.cmx
+   invertMat/invertMat.cmxa
+   invertMat/invertMat.ml
+   opam))
+ (libexec (heatMap/heatMap.cmxs hexLib/hexLib.cmxs invertMat/invertMat.cmxs))
+ (bin (hex)))
+(library
+ (name hexPlayer.heatMap)
+ (kind normal)
+ (archives (byte heatMap/heatMap.cma) (native heatMap/heatMap.cmxa))
+ (plugins (byte heatMap/heatMap.cma) (native heatMap/heatMap.cmxs))
+ (native_archives heatMap/heatMap.a)
+ (main_module_name HeatMap)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name heatMap)
+   (visibility public)
+   (source (path HeatMap) (impl (path heatMap/heatMap.ml))))))
+(library
+ (name hexPlayer.hexLib)
+ (kind normal)
+ (archives (byte hexLib/hexLib.cma) (native hexLib/hexLib.cmxa))
+ (plugins (byte hexLib/hexLib.cma) (native hexLib/hexLib.cmxs))
+ (native_archives hexLib/hexLib.a)
+ (requires hexPlayer.heatMap unionFind hexPlayer.invertMat)
+ (main_module_name HexLib)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name hexLib__)
+     (visibility public)
+     (kind alias)
+     (source (path HexLib__) (impl (path hexLib/hexLib__.ml-gen))))
+    (name HexLib)
+    (modules
+     (module
+      (obj_name hexLib)
+      (visibility public)
+      (source (path HexLib) (impl (path hexLib/hexLib.ml))))
+     (module
+      (obj_name hexLib__HexLibArch)
+      (visibility public)
+      (source (path HexLibArch) (impl (path hexLib/hexLibArch.ml))))))
+   (wrapped true))))
+(library
+ (name hexPlayer.invertMat)
+ (kind normal)
+ (archives (byte invertMat/invertMat.cma) (native invertMat/invertMat.cmxa))
+ (plugins (byte invertMat/invertMat.cma) (native invertMat/invertMat.cmxs))
+ (native_archives invertMat/invertMat.a)
+ (main_module_name InvertMat)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name invertMat)
+   (visibility public)
+   (source (path InvertMat) (impl (path invertMat/invertMat.ml))))))

@@ -1,0 +1,4 @@
+(library
+ (name hexLib)
+ (public_name hexPlayer.hexLib)
+ (libraries heatMap unionFind invertMat))
